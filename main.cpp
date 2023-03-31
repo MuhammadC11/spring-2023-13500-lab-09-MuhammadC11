@@ -33,6 +33,18 @@ int main()
   // print the new position
 
   // Task D
+  double x = 10;
+  double y = 20;
+  double z = 30;
+  Coord3D *ppos = createCoord3D(x, y, z);
+  double xVel = 5.5;
+  double yVel = -1.4;
+  double zVel = 7.77;
+  Coord3D *pvel = createCoord3D(xVel, yVel, zVel);
+  move(ppos, pvel, 10.0);
+  std::cout << "Coordinates after 10 seconds: " << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << std::endl;
 
-    return 0;
+  deleteCoord3D(ppos);
+  deleteCoord3D(pvel);
+  return 0;
 }

@@ -24,3 +24,26 @@ TEST_CASE("Task C")
     CHECK(pos.y == 12);
     CHECK(pos.z == 15);
 }
+
+TEST_CASE("Task E")
+{
+    Coord3D *first = createCoord3D(1, 2, 3);
+    Coord3D *second = createCoord3D(10, 20, 30);
+    Coord3D *third = createCoord3D(12, 32, -20);
+
+    CHECK((*first).x == 1);
+    CHECK((*first).y == 2);
+    CHECK((*first).z == 3);
+
+    CHECK((*second).x == 10);
+    CHECK((*second).y == 20);
+    CHECK((*second).z == 30);
+
+    CHECK((*third).x == 12);
+    CHECK((*third).y == 32);
+    CHECK((*third).z == -20);
+
+    deleteCoord3D(first);
+    deleteCoord3D(second);
+    deleteCoord3D(third);
+}
